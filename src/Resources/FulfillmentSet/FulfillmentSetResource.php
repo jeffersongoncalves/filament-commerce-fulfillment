@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Fulfillment\Resources\FulfillmentSet;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Fulfillment\Models\FulfillmentSet;
 use JeffersonGoncalves\FilamentCommerce\Fulfillment\CommerceFulfillmentPlugin;
@@ -26,9 +26,9 @@ class FulfillmentSetResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return FulfillmentSetForm::configure($schema);
+        return FulfillmentSetForm::configure($form);
     }
 
     public static function table(Table $table): Table
